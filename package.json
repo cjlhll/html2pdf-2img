@@ -1,5 +1,5 @@
 {
-  "name": "html2pdfimg",
+  "name": "html2pdf-2img",
   "version": "1.0.0",
   "description": "HTML下载成pdf或者img格式，并支持水印，pdf支持配置分页元素自动分页，不会截断元素。",
   "main": "jspdf.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cjlhll/html2pdfimg.git"
+    "url": "git+https://github.com/cjlhll/html2pdf-2img.git"
   },
   "keywords": [
     "html2pdf",
@@ -18,7 +18,7 @@
   "author": "caojian",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cjlhll/html2pdfimg/issues"
+    "url": "https://github.com/cjlhll/html2pdf-2img/issues"
   },
-  "homepage": "https://github.com/cjlhll/html2pdfimg#readme"
+  "homepage": "https://github.com/cjlhll/html2pdf-2img#readme"
 }
