@@ -7,7 +7,6 @@ HTML下载成pdf或者img格式，并支持水印，pdf支持配置分页元素�
       import JsPdfImg from "@/utils/jspdf.js";
 
       new JsPdfImg("#printPage", "导出的图片名称", {
-        pageBreak: ['.title', '#area'],
         watermarkOption: {
           watermark_txt: "水印配置",
           z_index: 97,
@@ -22,7 +21,7 @@ HTML下载成pdf或者img格式，并支持水印，pdf支持配置分页元素�
       });
       
       new JsPdfImg("#printPage", "导出的pdf名称", {
-        pageBreak: ['.title', '#area'],
+        pageBreak: ['.title', '#area', 'li', 'h3'], // 当导出pdf时候，这个参数必填
         watermarkOption: {
           watermark_txt: "水印配置",
           z_index: 97,

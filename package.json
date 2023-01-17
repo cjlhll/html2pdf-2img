@@ -1,10 +1,15 @@
 {
   "name": "html2pdf-2img",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "HTML下载成pdf或者img格式，并支持水印，pdf支持配置分页元素自动分页，不会截断元素。",
   "main": "jspdf.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1"
   },
   "repository": {
     "type": "git",
