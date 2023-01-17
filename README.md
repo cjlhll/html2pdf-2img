@@ -35,3 +35,7 @@ HTML下载成pdf或者img格式，并支持水印，pdf支持配置分页元素�
       }).outPdf(() => {
         console.log('结束')
       });
+
+
+
+感谢https://github.com/saucxs/watermark-dom
