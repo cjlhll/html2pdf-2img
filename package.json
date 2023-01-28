@@ -18,7 +18,13 @@
   "keywords": [
     "html2pdf",
     "html2img",
-    "jspdf"
+    "jspdf",
+    "js2pdf",
+    "js2img",
+    "html2image",
+    "js2image",
+    "js导出pdf",
+    "js导出图片"
   ],
   "author": "caojian",
   "license": "ISC",
