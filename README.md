@@ -1,5 +1,5 @@
 # html2pdf-2img
-HTML下载成pdf或者img格式，并支持水印，pdf支持配置分页元素自动分页，不会截断元素。
+HTML下载成pdf或者img格式，pdf也是以图片形式生成的，并支持水印，pdf支持配置分页元素自动分页，不会截断元素。
 
 基于jspdf.js和watermark.js二次封装，并且优化了pdf的分割判断方式，不会出现截断元素的问题。
 使用方法：
