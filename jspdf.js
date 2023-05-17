@@ -20,7 +20,7 @@ export default class YkJsPdf {
   }
   outPdf(successCallback, errorCallback) {
     if (!this.option.pageBreak || this.option.pageBreak && this.option.pageBreak.length === 0) {
-      alert('请传入要参与分页计算的元素=>pageBreaks')
+      alert('请传入要参与分页计算的元素=>pageBreak')
       return
     }
     if (!this.container) {
