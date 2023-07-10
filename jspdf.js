@@ -1,5 +1,5 @@
 // 导出页面为PDF格式
-import html2Canvas from 'html2canvas'
+import html2Canvas from '@persagy2/html2canvas'
 import JsPDF from 'jspdf'
 import fileSaver from 'file-saver'
 import watermark from './watermark'
