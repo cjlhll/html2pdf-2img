@@ -18,7 +18,14 @@ export default class YkJsPdf {
     document.body.scrollTop = 0*/
     this.watermarkInstance = null
   }
-  outPdf(successCallback, errorCallback) {
+    /**
+   *
+   * @param {*} successCallback
+   * @param {*} errorCallback
+   * @param {*} options 配置是否需要下载等相关参数
+   * @returns
+   */
+  outPdf(successCallback, errorCallback, options = { isSave: true, isPrint: false }) {
     if (!this.option.pageBreak || this.option.pageBreak && this.option.pageBreak.length === 0) {
       alert('请传入要参与分页计算的元素=>pageBreak')
       return
@@ -76,7 +83,13 @@ export default class YkJsPdf {
             }
           }
           // 下载pdf
-          pdf.save(this.title + '.pdf')
+          if (options.isSave) {
+            pdf.save(this.title + '.pdf');
+          }
+          // 自动打印
+          if (options.isPrint) {
+            pdf.autoPrint();
+          }
           this.watermarkInstance.remove()
           document.body.removeChild(this.overlay)
           successCallback && successCallback()
