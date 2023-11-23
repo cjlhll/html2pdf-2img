@@ -65,3 +65,20 @@ HTML下载成pdf或者img格式，pdf也是以图片形式生成的，并支持�
      }
 
 感谢https://github.com/saucxs/watermark-dom
+
+## outPdf 方法
+
+`outPdf(successCallback,errorCallback,options)`方法是用来下载和打印 pdf 文件
+
+| 属性名          | 类型     | 含义             | 默认值                        |
+| --------------- | -------- | ---------------- | ----------------------------- |
+| successCallback | function | 执行成功回调函数 |                               |
+| errorCallback   | function | 执行失败回调函数 |                               |
+| options         | IOptions | 配置项           | `{isSave:true,isPrint:false}` |
+
+## IOptions
+
+| 属性名  | 类型    | 含义         | 默认值 |
+| ------- | ------- | ------------ | ------ |
+| isSave  | boolean | 是否进行下载 | true   |
+| isPrint | boolean | 是否进行打印 | false  |
