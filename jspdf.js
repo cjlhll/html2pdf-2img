@@ -103,7 +103,10 @@ export default class YkJsPdf {
       })
     }
   }
-  outImage() {
+  outImage(
+    callback,
+    options = { isSave: true, isPrint: false, imgType: "image/jpeg" }
+    ) {
     let source = this.cloneNode(this.container, false)
     this.mountNode(source)
     if (this.option.watermarkOption) {
@@ -117,10 +120,18 @@ export default class YkJsPdf {
       useCORS: true,
       allowTaint: true
     }).then((canvas) => {
-      canvas.toBlob(blob => {
-        fileSaver.saveAs(blob, this.title + '.png')
-        document.body.removeChild(this.overlay)
-      })
+      if (options.isSave) {
+        canvas.toBlob((blob) => {
+          fileSaver.saveAs(blob, this.title + ".png");
+          document.body.removeChild(this.overlay);
+          callback && callback();
+        });
+      }
+      if (options.isPrint) {
+        const imgStr = canvas.toDataURL(imgType);
+        printJS({ printable: imgStr, type: "image", base64: true });
+        callback && callback();
+      }
     })
   }
   mountNode(source) {
